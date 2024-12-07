@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title> Finserve</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+    {% load static %}
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/img_5.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Shuffle
+  * Template URL: https://bootstrapmade.com/bootstrap-3-one-page-template-free-shuffle/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename text-info">GoldRush</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="{% url 'index' %}" class="active">Home</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'services' %}">Services</a></li>
+          <li><a href="{% url 'team' %}">Team</a></li>
+
+
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+            <li class="btn btn-info"><a href="{% url 'appointment' %}">Get Started</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section blue dark-background ">
+
+      <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+        <div class="carousel-item active">
+          <img src="{% static 'assets/img/hero-carousel/hero-carousel-3.jpg' %}" alt="">
+          <div class="carousel-container">
+            <h2>GoldRush </h2>
+              <h2>Financial Consulting</h2>
+            <p>Welcome to GoldRush ! Where your financial journey begins!</p>
+            <a href="{% url 'appointment' %}" class="btn-get-started">Get Started</a>
+          </div>
+        </div><!-- End Carousel Item -->
+
+        <div class="carousel-item">
+          <img src="{% static 'assets/img/hero-carousel/hero-carousel-2.jpg' %}" alt="">
+          <div class="carousel-container">
+            <h2 >Your Partner in Wealth </h2>
+              <h2>Management</h2>
+
+            <p> From investment planning to debt management, we’re here to help you make informed decisions and achieve lasting financial growth.Explore our services and discover how we can guide you toward a prosperous future.</p>
+            <a href="{% url 'appointment' %}" class="btn-get-started">Get Started</a>
+          </div>
+        </div><!-- End Carousel Item -->
+
+        <div class="carousel-item">
+          <img src="{% static 'assets/img/hero-carousel/img.png' %}" alt="">
+          <div class="carousel-container">
+            <h2>Simplify your Financial Life</h2>
+            <p>Our consulting services are designed to take the complexity out of managing your finances, helping you focus on what matters most.</p>
+            <a href="{% url 'appointment' %}" class="btn-get-started">Get Started</a>
+          </div>
+        </div><!-- End Carousel Item -->
+
+        <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+        </a>
+
+        <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+        </a>
+
+        <ol class="carousel-indicators"></ol>
+
+      </div>
+
+    </section><!-- /Hero Section -->
+
+
+    <!-- Services Section -->
+    <section id="services" class="services section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Services</h2>
+        <p>Explore our tailored services designed to empower your journey to financial success.</p>
+      </div><!-- End Section Title -->
+
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item position-relative">
+
+              <h4><a href="" class="stretched-link">Investment Advisory</a></h4>
+              <p>Helping you make informed decisions to grow and manage your wealth through tailored investment strategies.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+
+              <h4><a href="" class="stretched-link">Retirement Planning</a></h4>
+              <p>Ensuring a secure and stress-free future with personalized plans for your retirement savings and income needs.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item position-relative">
+
+              <h4><a href="" class="stretched-link">Debt Management and Credit Advisory</a></h4>
+              <p>Guiding you toward financial freedom by offering practical solutions for managing debt and improving credit health.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-3 col-md-6 d-flex " data-aos="fade-up" data-aos-delay="400" >
+            <div class="service-item position-relative">
+
+              <h4><a href="" class="stretched-link">Business Financial Consulting</a></h4>
+              <p>Empowering businesses with expert financial strategies to drive growth, optimize operations, and achieve success.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+
+            <div class="col-xl-3 col-md-6 d-flex " data-aos="fade-up" data-aos-delay="400" >
+            <div class="service-item position-relative">
+
+              <h4><a href="" class="stretched-link">Business Financial Consulting</a></h4>
+              <p>Empowering businesses with expert financial strategies to drive growth, optimize operations, and achieve success.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+    <!-- Call To Action Section -->
+    <section id="call-to-action" class="call-to-action section dark-background">
+
+      <img src="{% static 'assets/img/hero-carousel/hero-carousel-1.jpg' %}" alt="">
+
+      <div class="container">
+        <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-xl-10">
+            <div class="text-center">
+              <h3>Call To Action</h3>
+              <p>Let us help you achieve your financial goals with expert advice and personalized strategies. Whether you're planning for retirement, optimizing your investments, or managing risk, GoldRush Financial Consulting is here to guide you every step of the way.</p>
+              <p>Book a Consultation Today and discover how we can help you grow and protect your wealth.</p>
+      
+
+
+                <a class="cta-btn" href="{% url 'appointment' %}">Call To Action</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Call To Action Section -->
+
+    <!-- More Services Section -->
+    <section id="more-services" class="more-services section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>More Services</h2>
+
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="card">
+              <img src="{% static 'assets/img/img_1.png' %}" class="img-fluid" alt="">
+              <h3>Budgeting and Expense Management</h3>
+              <p>Helping you take control of your finances with effective budgeting strategies and smart expense tracking</p>
+            </div>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="card">
+              <img src="{% static 'assets/img/img_7.png' %}" class="img-fluid" alt="">
+              <h3>Personal Financial Planning</h3>
+              <p>Providing tailored plans to manage your finances, achieve your goals, and secure your financial future.</p>
+            </div>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="card">
+              <img src="{% static 'assets/img/img_4.png' %}" class="img-fluid" alt="">
+              <h3>Financial Literacy and Education.</h3>
+              <p>Empowering you with the knowledge and skills to make informed financial decisions and build a secure future.</p>
+            </div>
+          </div><!-- End Card Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /More Services Section -->
+
+
+
+
+    <!-- Faq Section -->
+    <section id="faq" class="faq section light-background">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="content px-xl-5">
+              <h3><span>Frequently Asked </span><strong>Questions</strong></h3>
+              <p>
+               At GoldRush Financial Consulting, we understand that financial planning can feel overwhelming. Here are answers to some of the most common questions we receive:
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="faq-container">
+              <div class="faq-item faq-active">
+                <h3><span class="num">1.</span> <span> What is financial planning, and why do I need it?</span></h3>
+                <div class="faq-content">
+                  <p>Financial planning helps you organize your finances, set clear goals, and create a roadmap to achieve them. It ensures you make informed decisions for a secure and prosperous future.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3><span class="num">2.</span> <span> Can you help me reduce my debt and improve my credit score?</span></h3>
+                <div class="faq-content">
+                  <p>Yes, our Debt Management and Credit Advisory services are designed to provide practical solutions for managing debt and improving credit health.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3><span class="num">3.</span> <span>How do I start saving for retirement?</span></h3>
+                <div class="faq-content">
+                  <p>Our Retirement Planning services help you create a personalized savings and investment strategy to secure a comfortable and stress-free retirement.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3><span class="num">4.</span> <span>Do you offer budgeting and expense management advice?</span></h3>
+                <div class="faq-content">
+                  <p>Absolutely! We specialize in helping clients take control of their finances through effective budgeting and smart expense tracking.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3><span class="num">5.</span> <span>Are your services suitable for small businesses?</span></h3>
+                <div class="faq-content">
+                  <p>Yes, our Business Financial Consulting services are tailored to help small businesses grow, optimize their operations, and achieve financial stability.
+
+</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Faq Section -->
+
+
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">GoldRush</span>
+          </a>
+          <p>Your trusted partner in wealth management and financial planning</p>
+            <p>GoldRush Financial Consulting is a registered financial advisory firm. All services provided comply with applicable regulations.</p>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#">Web Design</a></li>
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">Product Management</a></li>
+            <li><a href="#">Marketing</a></li>
+            <li><a href="#">Graphic Design</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Contact Us</h4>
+          <p>A108 Adam Street</p>
+          <p>New York, NY 535022</p>
+          <p>United States</p>
+          <p class="mt-4"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+          <p><strong>Email:</strong> <span>info@example.com</span></p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Shuffle</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+  <!-- Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>

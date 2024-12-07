@@ -1,0 +1,44 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+
+
+{% block body %}
+    <br>
+    <section id="appointment" class="appointment section container light-background ">
+    <h2 class="text-center text-white text-bg-info fw-bold  ">Book a Consultation</h2>
+
+  <div class="container d-flex">
+      <img src="{% static 'assets/img/img_15.png' %}" alt="" >
+
+    <form method="POST" class="ms-5">
+
+      {% csrf_token %}
+      <div class="mb-4 row d-flex" >
+        <label for="name" class="form-label ">Full Name</label><br>
+        <input type="text"class="form-control  " style="height: 60px;width: 500px " id="name" name="full_name" placeholder="Enter your name" required>
+      </div>
+      <div class="mb-4 row d-flex">
+        <label for="email" class="form-label ">Email</label><br>
+        <input type="email" class="form-control" style="height: 60px;width: 500px" id="email" name="email" placeholder="info@gmail.com">
+      </div>
+      <div class="mb-4 row d-flex">
+           <label for="phone_number" class="form-label ">Phone Number</label><br>
+        <input type="tel" class="form-control" style="height: 60px;width: 500px" id="phone_number" name="phone_number" placeholder="Enter your phone number" required>
+      </div>
+      <div class="mb-4 row d-flex">
+        <label for="date" class="form-label">Date</label><br>
+        <input type="date" class="form-control" style="height: 60px;width: 500px" id="date" name="date" placeholder="mm/dd/yy">
+      </div>
+
+        <div class="mb-4 row d-flex">
+            <label for="message" class="form-label">Message</label><br>
+        <textarea class="form-control" style="height: 60px;width: 500px" id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+        </div>
+        <br><br>
+      <button type="submit" class="btn btn-primary">Book Now !</button>
+    </form>
+  </div>
+</section>
+
+
+{% endblock %}
